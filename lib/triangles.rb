@@ -1,31 +1,19 @@
 class Triangle
-    define_method(:initialize) do |a_side, b_side, c_side|
+  define_method(:initialize) do |a_side, b_side, c_side|
     @a_side = a_side
     @b_side = b_side
     @c_side = c_side
   end
 
-  define_method(:sides) do
-    if @a_side + @b_side > @c_side && @a_side + @c_side > @b_side && @b_side + @c_side > @a_side
-      return true
-    else
+  define_method(:type) do
+    if @a_side + @b_side <= @c_side || @a_side + @c_side <= @b_side || @b_side + @c_side <= @a_side
       return "These measurements do not make a triangle"
-    end
-  end
-
-  define_method(:equilateral) do
-    if @a_side == @b_side && @b_side == @c_side && @a_side == @c_side
+    elsif @a_side == @b_side && @b_side == @c_side && @a_side == @c_side
       return "These sides make a equilateral"
-    else
-      return false
-    end
-  end
-
-  define_method(:isosceles) do
-    if @a_side == @b_side || @b_side == @c_side || @a_side == @c_side
+    elsif @a_side == @b_side || @b_side == @c_side || @a_side == @c_side
       return "These sides make a isosceles"
     else
-      return false
+      return "These sides make a scalene"
     end
-  end 
+  end
 end
