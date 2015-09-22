@@ -12,4 +12,12 @@ class Triangle
       return "These measurements do not make a triangle"
     end
   end
+
+  define_method(:equilateral) do
+    if @a_side == @b_side && @b_side == @c_side && @a_side == @c_side
+      return "These sides make a equilateral"
+    else
+      return false
+    end
+  end
 end
