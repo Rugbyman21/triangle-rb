@@ -20,4 +20,12 @@ class Triangle
       return false
     end
   end
+
+  define_method(:isosceles) do
+    if @a_side == @b_side || @b_side == @c_side || @a_side == @c_side
+      return "These sides make a isosceles"
+    else
+      return false
+    end
+  end 
 end
