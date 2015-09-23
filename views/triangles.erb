@@ -1,0 +1,15 @@
+<h1>Your triangle is:</h1>
+
+<% if @triangle.type() %>
+  <h3>These sides make a equilateral</h3>
+
+<% elsif @triangle.type() %>
+  <h3>These sides make a isosceles</h3>
+
+<% elsif @triangle.type() %>
+  <h3>These sides make a scalene</h3>
+
+<% else %>
+  <h3>Your sides do not make a triangle</h3>
+
+<% end %>
